@@ -1,13 +1,16 @@
-import styles from "./Caixa.module.css";
-// import estilo from "../../../classesTestes/abismo/CaixaAbismo"
+// import styles from "./Caixa.module.css";
 
+import ConjuntoClasse from "../../classesTestes/ConjuntoClasse"
 
 function Caixa(props){
-    // const teste = new estilo("200px","200px",33)
-    console.log(new estilo("22px",2,2));
+    const CC = new ConjuntoClasse()
+    const conjuntoTristeaza = CC.criarConjunto('tristeza')
+    const teste = conjuntoTristeaza.caixa()
+    console.log(teste);
+ 
     
     return(
-        <form >
+        <form  style={teste} >
             
             {props.children} 
         </form>
