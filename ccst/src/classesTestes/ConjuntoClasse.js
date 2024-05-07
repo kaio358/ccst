@@ -5,7 +5,7 @@ class ConjuntoClasse{
     criarConjunto(tipo){
         const convercaoTipo = tipo.toLowerCase()
         if(convercaoTipo == 'tristeza'){
-            return new ConjuntoTristeza
+            return new ConjuntoTristeza()
         }
     }
 }

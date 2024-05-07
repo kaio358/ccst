@@ -1,6 +1,7 @@
 .estruturaCaixa{
     border: 1px solid black;
     border-radius: 5%;
+
     width: 40dvw;
     margin: 10dvh auto ;
     height: 80dvh;

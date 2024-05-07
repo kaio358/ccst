@@ -6,7 +6,7 @@ function Caixa(props){
     const CC = new ConjuntoClasse()
     const conjuntoTristeaza = CC.criarConjunto('tristeza')
     const teste = conjuntoTristeaza.caixa()
-    console.log(teste);
+  
  
     
     return(
