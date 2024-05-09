@@ -1,13 +1,14 @@
-import InputEstilo from "../../classesTestes/InputEstilo"
-import InputTristeza from "../../classesTestes/tristeza/InputTristeza"
-
+import ConjuntoClasse from "../../classesTestes/ConjuntoClasse"
 
 
 function Inputs(props){
-    const estilo =  new InputTristeza()
+    const cc = new ConjuntoClasse()
+    const conjuntoTristeaza = cc.criarConjunto('tristeza')
+    const estiloInput = conjuntoTristeaza.input()
+
     return(
-        <div >
-            <input type={props.tipo} placeholder={props.textoAtras} style={estilo}/>
+        <div  >
+            <input type={props.tipo} placeholder={props.textoAtras} style={estiloInput}/>
         </div>
     )
 }

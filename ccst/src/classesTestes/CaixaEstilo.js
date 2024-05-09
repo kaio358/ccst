@@ -1,11 +1,13 @@
 class CaixaEstilo{
    
-    constructor(altura,largura,raio, posicao){
+    constructor(altura,largura,raio, posicao,backgroundColor){
         this.height = altura
         this.width = largura
         this.borderRadius = raio
         this.margin = posicao
+        this.backgroundColor = backgroundColor
     }
+
     getAltura(){
         return this.height;
     }
@@ -15,6 +17,12 @@ class CaixaEstilo{
     getRaio(){
         return this.borderRadius
     }
+    getPosicao(){
+        return this.margin 
+    }
+    getBackgroundColor(){
+        return this.backgroundColor
+    }
     setAltura(altura){
         this.height = altura
     }
@@ -23,6 +31,12 @@ class CaixaEstilo{
     }
     setRaio(raio){
         this.borderRadius = raio
+    }
+    setPosicao(posicao){
+        this.posicao = posicao
+    }
+    setBackgroundColor( backgroundColor){
+        this.backgroundColor = backgroundColor
     }
     
 }

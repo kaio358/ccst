@@ -1,7 +1,10 @@
 class InputEstilo{
-    constructor( raio  ,  medidasGerais ,tipoBorder = "solid",corBorder , largura = "25dvw", altura = "3dvh" ){
+    constructor( altura, largura, raio ,posicao ,  medidasGerais ,tipoBorder,corBorder,backgroundColor,color,fontSize   ){
+        this.height = altura        
+        this.width = largura
         this.borderRadius = raio
-      
+        this.margin = posicao
+    //   console.log(medidasGerais);
         if(medidasGerais.length > 1){
             
             if(medidasGerais.length == 3){
@@ -27,11 +30,76 @@ class InputEstilo{
         }
 
 
+        this.backgroundColor =  backgroundColor
+        this.color = color
+        this.fontSize = fontSize
         
-        this.width = largura
-        this.height = altura
 
     }
+    getAltura(){
+        return this.height;
+    }
+    getLargura(){
+        return this.width;
+    }
+    getRaio(){
+        return this.borderRadius
+    }
+    getPosicao(){
+        return this.margin 
+    }
+    getBackgroundColor(){
+        return this.backgroundColor
+    }
+    getMedidasGerais(){
+        return this.medidasGerais
+    }
+    getTipoBorder(){
+        return this.tipoBorder
+    }
+    getCorBorder(){
+        return this.corBorder
+    }
+ 
+    getColor(){
+        return this.color
+    }
+    getFontSize(){
+        return this.fontSize
+    }
+
+    setAltura(altura){
+        this.height = altura
+    }
+    setLargura(largura){
+        this.width= largura
+    }
+    setRaio(raio){
+        this.borderRadius = raio
+    }
+    setPosicao(posicao){
+        this.posicao = posicao
+    }
+    setBackgroundColor( backgroundColor){
+        this.backgroundColor = backgroundColor
+    }
+    setMedidasGerais(medidasGerais){
+        this.medidasGerais = medidasGerais
+    }
+    setTipoBorder(tipoBorder){
+        this.tipoBorder = tipoBorder
+    }
+    setCorBorder(corBorder){
+        this.corBorder = corBorder
+    }
+ 
+    setColor(color){
+        this.color = color
+    }
+    setFontSize(fontSize){
+        this.fontSize = fontSize
+    }
+
 }
 
 export default InputEstilo
