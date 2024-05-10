@@ -1,9 +1,7 @@
-class ButtonEsitlo{
-    constructor(altura = "4dvh", largura= "20dvw",raio ,posicao , borda,backgroundColor ,color,fontSize ){
-
-       
+class SelectEstilo{
+    constructor( altura = "3dvh", largura= "25dvw", raio ,posicao , borda,backgroundColor ,color,fontSize   ){
+        this.height = altura        
         this.width = largura
-        this.height = altura
         this.borderRadius = raio
         this.margin = posicao
         this.border = borda
@@ -12,6 +10,8 @@ class ButtonEsitlo{
         this.backgroundColor =  backgroundColor
         this.color = color
         this.fontSize = fontSize
+        
+
     }
     getAltura(){
         return this.height;
@@ -76,7 +76,5 @@ class ButtonEsitlo{
     setFontSize(fontSize){
         this.fontSize = fontSize
     }
-
 }
-
-export default ButtonEsitlo
+export default SelectEstilo

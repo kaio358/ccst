@@ -3,14 +3,13 @@
 import ConjuntoClasse from "../../classesTestes/ConjuntoClasse"
 
 function Caixa(props){
-    const CC = new ConjuntoClasse()
-    const conjuntoTristeaza = CC.criarConjunto('tristeza')
-    const teste = conjuntoTristeaza.caixa()
+
+    
   
  
     
     return(
-        <form  style={teste} >
+        <form  style={props.estilo} >
             
             {props.children} 
         </form>

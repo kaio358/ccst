@@ -3,17 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-import ConjuntoClasse from './classesTestes/ConjuntoClasse';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 
-// mudando o fundo 
-const cc = new ConjuntoClasse()
-const conjuntoTristeaza = cc.criarConjunto('tristeza')
-const fundo = conjuntoTristeaza.fundo()
-document.body.style.backgroundColor = fundo.getColor()
+
+
 
 root.render(
   <React.StrictMode >
