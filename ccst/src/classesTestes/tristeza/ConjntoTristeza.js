@@ -28,7 +28,7 @@ class ConjuntoTristeza{
     titulo(color, fontSize, fontFamily,posicao = "2dvh auto " ){
         return new PalavraTristeza(color, fontSize = "18px", fontFamily,posicao)
     }
-    palavra(color, fontSize, fontFamily,posicao){
+    palavra(color, fontSize = "12px", fontFamily,posicao){
         return new PalavraTristeza(color, fontSize , fontFamily,posicao)
     }
 
