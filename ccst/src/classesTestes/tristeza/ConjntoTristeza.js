@@ -14,8 +14,8 @@ class ConjuntoTristeza{
     fundo(){
         return new FundoTristeza()
     }
-    input(altura = "3dvh",largura = "25dvw", raio ,posicao= "2dvh auto " ,   medidasGerais = ["0px","0px","2px", "0px"] ,tipoBorder = "solid",corBorder = "White", backgroundColor = "transparent",color = "white", fontSize = "15px"){
-        return new InputTristeza(altura,largura,raio,posicao,medidasGerais,tipoBorder,corBorder,backgroundColor,color,fontSize)
+    input(altura = "3dvh",largura = "25dvw", raio ,posicao= "2dvh auto " ,   medidasGerais = ["0px","0px","2px", "0px"] ,tipoBorder = "solid",corBorder = "White", backgroundColor = "transparent",color = "white", fontSize = "15px",padding){
+        return new InputTristeza(altura,largura,raio,posicao,medidasGerais,tipoBorder,corBorder,backgroundColor,color,fontSize,padding)
     }
     select( altura, largura, raio = "3px" ,posicao = "2dvh auto "  , borda ="1px solid white",backgroundColor = "#455559" ,color = "White",fontSize){
         return new SelectTristeza(altura, largura, raio ,posicao , borda,backgroundColor ,color,fontSize)
@@ -25,8 +25,8 @@ class ConjuntoTristeza{
     }
 
     // para texto
-    titulo(color, fontSize, fontFamily,posicao = "2dvh auto " ){
-        return new PalavraTristeza(color, fontSize = "18px", fontFamily,posicao)
+    titulo(color, fontSize = "18px", fontFamily,posicao = "2dvh auto " ){
+        return new PalavraTristeza(color, fontSize , fontFamily,posicao)
     }
     palavra(color, fontSize = "12px", fontFamily,posicao){
         return new PalavraTristeza(color, fontSize , fontFamily,posicao)

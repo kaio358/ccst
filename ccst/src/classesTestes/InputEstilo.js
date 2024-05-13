@@ -1,5 +1,5 @@
 class InputEstilo{
-    constructor( altura, largura, raio ,posicao ,  medidasGerais ,tipoBorder,corBorder,backgroundColor,color,fontSize   ){
+    constructor( altura, largura, raio ,posicao ,  medidasGerais ,tipoBorder,corBorder,backgroundColor,color,fontSize , padding){
         this.height = altura        
         this.width = largura
         this.borderRadius = raio
@@ -33,6 +33,7 @@ class InputEstilo{
         this.backgroundColor =  backgroundColor
         this.color = color
         this.fontSize = fontSize
+        this.padding = padding
         
 
     }
@@ -67,7 +68,9 @@ class InputEstilo{
     getFontSize(){
         return this.fontSize
     }
-
+    getPadding(){
+        return this.padding
+    }
     setAltura(altura){
         this.height = altura
     }
@@ -99,7 +102,9 @@ class InputEstilo{
     setFontSize(fontSize){
         this.fontSize = fontSize
     }
-
+    setPadding(padding){
+        this.padding = padding
+    }
 }
 
 export default InputEstilo

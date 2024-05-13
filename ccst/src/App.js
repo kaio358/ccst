@@ -18,7 +18,7 @@ function App() {
   // Estilos
   // conjuntos
   const cc = new ConjuntoClasse()
-  const conjuntoTristeaza = cc.criarConjunto('tristeza')
+  const conjuntoTristeaza = cc.criarConjunto('claro')
 
 
   // fundo
