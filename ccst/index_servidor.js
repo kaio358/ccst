@@ -20,9 +20,10 @@ conexao.connect(erro =>{
         console.log(erro);
     }else{
         Tabelas.init(conexao)
+        server.listen(8080,()=>{
+            console.log("Conectado: http://localhost:8080");
+        })
     }
 })
 
-server.listen(8080,()=>{
-    console.log("Conectado: http://localhost:8080");
-})
+

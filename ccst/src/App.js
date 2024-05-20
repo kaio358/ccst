@@ -36,8 +36,8 @@ function App() {
   const estiloTitulo = conjuntoTristeaza.titulo()
 
   return (
-    <div className="App">
-      <Caixa estilo={estiloCaixa}>
+    <div className="App" >
+      <Caixa estilo={estiloCaixa} tipo="">
         <h1 style={estiloTitulo}>Conte</h1>
         <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput}/>
         <Select estilo ={estiloSelect}/>
