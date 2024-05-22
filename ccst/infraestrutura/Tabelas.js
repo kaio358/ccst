@@ -4,8 +4,8 @@
 class Tabelas{
     init(conexao){
         this.conexao = conexao
-        this.criarSolicitacao()
         this.criarEspecialidade()
+        this.criarSolicitacao()
         this.criarTecnico()
 
 
@@ -17,7 +17,10 @@ class Tabelas{
             mensagem varchar(255), 
             data datetime, 
             finalizado tinyint, 
-            primary key (idSolicitacao)
+            Especialidade_idEspecialidade int,
+            primary key (idSolicitacao),
+            foreign key(Especialidade_idEspecialidade) references Especialidade(idEspecialidade) 
+
         )` 
         
         this.conexao.query(sql,erro=>{
@@ -33,9 +36,8 @@ class Tabelas{
         (
             idEspecialidade int , 
             funcao varchar(100), 
-            solicitacao_idSolicitacao int, 
-            primary key(idEspecialidade), 
-            foreign key (solicitacao_idSolicitacao) references Solicitacao (idSolicitacao) 
+            primary key(idEspecialidade)
+            
         )`
     
         this.conexao.query(sql,erro=>{

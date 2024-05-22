@@ -39,8 +39,8 @@ function App() {
     <div className="App" >
       <Caixa estilo={estiloCaixa} tipo="">
         <h1 style={estiloTitulo}>Conte</h1>
-        <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput}/>
-        <Select estilo ={estiloSelect}/>
+        <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput} nome="mensagem"/>
+        <Select estilo ={estiloSelect} nome="funcionario"/>
         <Button texto= "Seila" estilo={estiloButton}/>
       </Caixa>
     </div>
