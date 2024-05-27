@@ -1,0 +1,13 @@
+.message_c{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px;
+
+    
+ 
+}
+
+.para{
+    font-weight: 600;
+}

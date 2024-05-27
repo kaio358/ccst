@@ -1,49 +1,37 @@
-
 import './App.css';
 
-import Caixa from "./componentes/layouts/Caixa"
-import Inputs from './componentes/layouts/Inputs';
-import Select from './componentes/layouts/Select';
-import Button from './componentes/layouts/Button';
+import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 
-// estilos 
+import GerarPedido from './componentes/paginas/GerarPedido';
+import Pedidos from './componentes/paginas/Pedidos';
+
 import ConjuntoClasse from './classesTestes/ConjuntoClasse';
 
 
 
 
-
 function App() {
-
-  // Estilos
-  // conjuntos
   const cc = new ConjuntoClasse()
-  const conjuntoTristeaza = cc.criarConjunto('claro')
+  const conjuntoTristeaza = cc.criarConjunto('tristeza')
 
-
-  // fundo
-  const fundo = conjuntoTristeaza.fundo()
-  document.body.style.backgroundColor = fundo.getColor()
-  //caixa 
-  const estiloCaixa = conjuntoTristeaza.caixa()
-  //input 
-  const estiloInput = conjuntoTristeaza.input()
-  //select 
-  const estiloSelect = conjuntoTristeaza.select()
-  //button 
-  const estiloButton = conjuntoTristeaza.button()
-  //titulo
-  const estiloTitulo = conjuntoTristeaza.titulo()
+   // fundo
+   const fundo = conjuntoTristeaza.fundo()
+   document.body.style.backgroundColor = fundo.getColor()
+ 
 
   return (
-    <div className="App" >
-      <Caixa estilo={estiloCaixa} tipo="">
-        <h1 style={estiloTitulo}>Conte</h1>
-        <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput} nome="mensagem"/>
-        <Select estilo ={estiloSelect} nome="funcionario"/>
-        <Button texto= "Seila" estilo={estiloButton}/>
-      </Caixa>
-    </div>
+    <Router>
+
+      
+     
+      <Routes>
+        <Route exact path='/' element ={<Pedidos/>} />
+        <Route exact path='/gerarPedido' element ={<GerarPedido/>} />
+      
+                        
+            
+      </Routes>
+    </Router>
   );
 }
 

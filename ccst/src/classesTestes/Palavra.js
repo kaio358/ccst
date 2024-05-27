@@ -4,6 +4,7 @@ class Palavra{
         this.fontSize = fontSize
         this.fontFamily = fontFamily
         this.margin = posicao
+      
 
     }
     getColor(){

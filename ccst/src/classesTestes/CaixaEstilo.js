@@ -6,6 +6,8 @@ class CaixaEstilo{
         this.borderRadius = raio
         this.margin = posicao
         this.backgroundColor = backgroundColor
+        // this.padding = "50px"
+        this.textAlign = "center"
     }
 
     getAltura(){

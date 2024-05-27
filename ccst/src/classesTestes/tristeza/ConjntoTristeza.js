@@ -1,7 +1,10 @@
+import BarraSuperiorTristeza from "./BarraSuperiorTristeza"
 import ButtonTristeza from "./ButtonTrsiteza"
+import CaixaDeMensagensTristeza from "./CaixaDeMensagensTristeza"
 import CaixaTristeza from "./CaixaTristeza"
 import FundoTristeza from "./FundoTristeza"
 import InputTristeza from "./InputTristeza"
+import LiMensagemTristeza from "./LiMensagemTristeza"
 import PalavraTristeza from "./PalavraTristeza"
 import SelectTristeza from "./SelectTristeza"
 class ConjuntoTristeza{
@@ -31,7 +34,16 @@ class ConjuntoTristeza{
     palavra(color, fontSize = "12px", fontFamily,posicao){
         return new PalavraTristeza(color, fontSize , fontFamily,posicao)
     }
-
+    
+    barra(backgroundColor,boxShadow){
+        return new BarraSuperiorTristeza(backgroundColor,boxShadow)
+    }
+    CaixaMensagens(altura ="80dvh" ,largura = "80%" ,raio = "10px" , posicao = "20px auto", backgroundColor ='#2F3D40'){
+        return new CaixaDeMensagensTristeza(altura,largura ,raio, posicao, backgroundColor )
+    }
+    LiMensagem(altura,largura = "90%",raio  = "5px", posicao = "10px auto",backgroundColor = "white"){
+        return new LiMensagemTristeza(altura,largura,raio, posicao,backgroundColor)
+    }
 }
 
 export default ConjuntoTristeza

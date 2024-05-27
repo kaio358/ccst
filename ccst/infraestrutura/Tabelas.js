@@ -11,7 +11,7 @@ class Tabelas{
 
     }
     criarSolicitacao(){
-        const sql = `CREATE TABLE IF NOT EXISTS Solicitacao
+        const sql = `CREATE TABLE IF NOT EXISTS Solicitacao 
          ( 
             idSolicitacao int , 
             mensagem varchar(255), 
