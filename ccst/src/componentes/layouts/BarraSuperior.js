@@ -2,18 +2,16 @@ import {Link} from 'react-router-dom'
 
 import styles from "./BarraSuperior.module.css"
 
-import ConjuntoClasse from "../../classesTestes/ConjuntoClasse";
 
 
 
-function BarrarSuperior(){
-    const cc = new ConjuntoClasse()
-    const conjuntoTristeaza = cc.criarConjunto('tristeza')
-    const barra = conjuntoTristeaza.barra()
+
+function BarrarSuperior(props){
+   
 
     
     return(
-        <nav style={barra} className={styles.containerMenu}>
+        <nav style={props.estilo} className={styles.containerMenu}>
             <div>
                
             </div>

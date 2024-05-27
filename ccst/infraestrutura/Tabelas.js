@@ -67,6 +67,14 @@ class Tabelas{
         })
 
     }
+    criarStatus(){
+        const sql = `CREATE TABLE IF NOT EXISTS Status 
+        (
+            idStatus int, 
+            tipo varchar(45), 
+            primary key (idTecnico)
+        ) `
+    }
 
 
 

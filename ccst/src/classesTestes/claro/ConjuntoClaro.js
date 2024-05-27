@@ -1,9 +1,13 @@
+import BarraSuperiorClaro from "./BarraSuperiorClaro"
 import ButtonClaro from "./ButtonClaro"
+import CaixaDeMensagensClaro from "./CaixaDeMensagensClaro"
 import CaixaClaro from "./CaixaClaro"
 import FundoClaro from "./FundoClaro"
 import InputClaro from "./InputClaro"
+import LiMensagemClaro from "./LiMensagemClaro"
 import PalavraClaro from "./PalavraClaro"
 import SelectClaro from "./SelectClaro"
+
 class ConjuntoClaro{
    
 
@@ -32,6 +36,17 @@ class ConjuntoClaro{
         return new PalavraClaro(color, fontSize , fontFamily,posicao)
     }
 
+
+    barra(backgroundColor = "#B3D6FF",boxShadow){
+        return new BarraSuperiorClaro(backgroundColor,boxShadow)
+    }
+    CaixaMensagens(altura ="80dvh" ,largura = "80%" ,raio = "10px" , posicao = "20px auto", backgroundColor ='#B3D6FF'){
+        return new CaixaDeMensagensClaro(altura,largura ,raio, posicao, backgroundColor )
+    }
+    LiMensagem(altura,largura = "90%",raio  = "5px", posicao = "10px auto",backgroundColor = "white"){
+        return new LiMensagemClaro(altura,largura,raio, posicao,backgroundColor)
+        
+    }
 }
 
 export default ConjuntoClaro

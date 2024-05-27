@@ -5,14 +5,15 @@ import LiMensagem from '../layouts/LiMensagem';
 
 function Pedidos(props) {
     const cc = new ConjuntoClasse()
-    const conjuntoTristeaza = cc.criarConjunto('tristeza')
+    const conjuntoTristeaza = cc.criarConjunto('claro')
     const caixaDeMensagens = conjuntoTristeaza.CaixaMensagens()
     const liMensagem = conjuntoTristeaza.LiMensagem()
+    const barra = conjuntoTristeaza.barra()
    
     return (
         <div >
             <div >
-                 <BarrarSuperior/>
+                 <BarrarSuperior estilo={barra}/>
             </div>
             <section style={caixaDeMensagens} >
                 <ul  >

@@ -12,7 +12,7 @@ import ConjuntoClasse from './classesTestes/ConjuntoClasse';
 
 function App() {
   const cc = new ConjuntoClasse()
-  const conjuntoTristeaza = cc.criarConjunto('tristeza')
+  const conjuntoTristeaza = cc.criarConjunto('claro')
 
    // fundo
    const fundo = conjuntoTristeaza.fundo()

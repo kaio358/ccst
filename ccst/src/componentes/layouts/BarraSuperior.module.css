@@ -7,7 +7,7 @@
     padding: 5px;
     /* box-shadow: 0 8px 10px 0  #1f2f2e8d; */
     backdrop-filter: blur( 13.5px );
-    opacity: .8;
+    /* opacity: .8; */
 
 }
 
@@ -27,10 +27,11 @@
 }
 .lista_nav a{
     text-decoration: none;
-    color: #F9F7F3;
+    color: white;
+    
 }
 .lista_nav a:hover{
-    border-bottom: 4px solid #F9F7F3;
+    border-bottom: 4px solid white;
 }
 ul{
     padding: 0px;
