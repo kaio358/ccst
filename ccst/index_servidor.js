@@ -16,6 +16,7 @@ const conexao = require('./infraestrutura/conexao')
 const Tabelas = require('./infraestrutura/Tabelas')
 
 const rotaSolicitacao = require("./rotas/rotaSolicitacao")
+const rotaSolicitacaoEspecialidade = require("./rotas/rotaSolicitacaoEspecialidade")
 
 conexao.connect(erro =>{
     if(erro){
@@ -23,6 +24,7 @@ conexao.connect(erro =>{
     }else{
         Tabelas.init(conexao)
         app.use("/",rotaSolicitacao)
+        app.use("/",rotaSolicitacaoEspecialidade)
         server.listen(8080,()=>{
             console.log("Conectado: http://localhost:8080");
         })

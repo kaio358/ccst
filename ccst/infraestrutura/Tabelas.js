@@ -16,7 +16,7 @@ class Tabelas{
     criarSolicitacao(){
         const sql = `CREATE TABLE IF NOT EXISTS Solicitacao 
          ( 
-            idSolicitacao int , 
+            idSolicitacao int  AUTO_INCREMENT, 
             mensagem varchar(255), 
             data datetime, 
             finalizado tinyint, 
@@ -38,7 +38,7 @@ class Tabelas{
     criarEspecialidade(){
         const sql = `CREATE TABLE IF NOT EXISTS Especialidade 
         (
-            idEspecialidade int , 
+            idEspecialidade int AUTO_INCREMENT, 
             funcao varchar(100), 
             primary key(idEspecialidade)
             
@@ -53,7 +53,7 @@ class Tabelas{
         })
     }
     criarSolicitacaoEspecialidade(){
-        const sql = `CREATE TABLE solicitacao_especialidade 
+        const sql = `CREATE TABLE IF NOT EXISTS solicitacao_especialidade 
         (
             solicitacao_id INT,
             especialidade_id INT,
@@ -72,7 +72,7 @@ class Tabelas{
     criarTecnico(){
         const sql =`CREATE TABLE IF NOT EXISTS Tecnico 
         (
-            idTecnico int, 
+            idTecnico int AUTO_INCREMENT, 
             nome varchar(45), 
             Especialidade_idEspecialidade int, 
             Status_idStatus int, 
@@ -93,7 +93,7 @@ class Tabelas{
     criarStatus(){
         const sql = `CREATE TABLE IF NOT EXISTS Status 
         (
-            idStatus int, 
+            idStatus int AUTO_INCREMENT, 
             tipo varchar(45),
             primary key (idStatus)
     
