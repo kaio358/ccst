@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import ConjuntoClasse from '../../classesTestes/ConjuntoClasse';
 import BarrarSuperior from '../layouts/BarraSuperior';
 import LiMensagem from '../layouts/LiMensagem';
+import { Link } from 'react-router-dom';
 
 
 function Pedidos(props) {
@@ -62,8 +63,8 @@ function Pedidos(props) {
                          
                          const dataFormatada = formatarData(l.data);
                         //  console.log(dataFormatada);
-                        return <LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/>
-                       
+                        // return <LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/>
+                        return <Link to={`/pedido?${l.id}`}><LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/></Link>
                     }):""}
                 </ul>
             </section>

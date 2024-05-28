@@ -26,7 +26,7 @@
     font-size: 20px;
 }
 .lista_nav a{
-    text-decoration: none;
+   
     color: white;
     
 }
@@ -35,4 +35,10 @@
 }
 ul{
     padding: 0px;
+}
+ul a{
+    color: black;
+}
+a{
+    text-decoration: none;
 }

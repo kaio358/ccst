@@ -6,6 +6,7 @@ import GerarPedido from './componentes/paginas/GerarPedido';
 import Pedidos from './componentes/paginas/Pedidos';
 
 import ConjuntoClasse from './classesTestes/ConjuntoClasse';
+import TextoMensagem from './componentes/semiPaginas/TextoMensagem';
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route exact path='/' element ={<Pedidos/>} />
         <Route exact path='/gerarPedido' element ={<GerarPedido/>} />
+        <Route exact path='/pedido' element={<TextoMensagem/>}/>
       
                         
             
