@@ -19,6 +19,23 @@ class Solicitacao_Especialidade{
         })
        
     }
+    selecionaUm(id){
+        const sql = `SELECT s.mensagem AS descricao, e.funcao AS especialidade, s.data AS data, s.idSolicitacao AS id
+        FROM solicitacao s
+        JOIN solicitacao_especialidade se ON s.idSolicitacao = se.solicitacao_id
+        JOIN especialidade e ON se.especialidade_id = e.idEspecialidade WHERE s.idSolicitacao = ${id}
+        `
+
+        return new Promise((resolve,reject)=>{
+            conexao.query(sql,(erro,resultado)=>{
+                if(erro){
+                    reject(erro)
+                }else{
+                    resolve(resultado)
+                }
+            })
+        })
+    }
 }
 
 module.exports = new Solicitacao_Especialidade

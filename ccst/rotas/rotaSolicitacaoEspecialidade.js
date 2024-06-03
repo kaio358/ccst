@@ -11,4 +11,10 @@ rota.get("/lista",async (req,res)=>{
     res.json(consulta)
 })
 
+rota.post("/selecionaUm",async(req,res)=>{
+    const id = req.body.id
+    const consulta = await solicitacao_especialidade.selecionaUm(id)
+    res.json(consulta)
+})
+
 module.exports = rota
