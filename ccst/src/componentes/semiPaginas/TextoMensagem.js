@@ -40,7 +40,7 @@ function TextoMensagem(props) {
                 // console.log(newData);
                 setDados(newData)
               } else {
-                //   console.log('Os dados não estão no formato esperado.',dados);
+                //   console.log(dados);
                   setDados(dados)
                   // Trate o caso em que os dados não estão no formato esperado
               }
@@ -54,10 +54,10 @@ function TextoMensagem(props) {
                 <BarrarSuperior estilo={barra}/>
             </div>
             <main className={styles.caixaDeTextoDaMensagem}>
-                <div className={styles.paraQuem}>OI</div>
-                <div className={styles.titulo}>Seila</div>
+                <div className={styles.paraQuem}>{dados ? dados[0].especialidade:""}</div>
+                <div className={styles.titulo}><h2>Seila</h2></div>
                 <div className={styles.texto}>
-                    lorem
+                    {dados?dados[0].descricao:""}
                 </div>
             </main>
 
