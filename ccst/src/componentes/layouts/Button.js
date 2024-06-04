@@ -1,5 +1,5 @@
 
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function Button(props){
     return(
@@ -8,7 +8,7 @@ function Button(props){
         //         {props.texto}
         //     </button>
         // </Link>
-    <button style={props.estilo}>
+    <button style={props.estilo} type="submit">
         {props.texto}
     </button>
        

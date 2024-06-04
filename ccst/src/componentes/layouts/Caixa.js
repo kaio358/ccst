@@ -4,7 +4,6 @@
 
 function Caixa(props){
 
-    
   
  
     // const form = document.getElementById('some-form')
@@ -14,7 +13,7 @@ function Caixa(props){
     // })
 // action="http://localhost:8080/teste" method="POST" id="some-form"
     return(
-        <form  style={props.estilo}  >
+        <form  style={props.estilo}   action="http://localhost:8080/teste" method="POST" id="some-form" >
             
             {props.children} 
         </form>

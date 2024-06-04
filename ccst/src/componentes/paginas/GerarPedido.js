@@ -45,36 +45,47 @@ function GerarPedido(props) {
     }
 
 
-    function enviar() {
-      
-        const formData = new FormData();
-     
-        formData.append('mensagem', dadosMensagem);
-        formData.append('funcao', dadosFuncionario);
+    // function enviar(e) {
+    //     e.preventDefault();
+    //     const formData = new FormData();
+   
+    //     formData.append("mensagem", dadosMensagem);
+    //     formData.append("funcao", dadosFuncionario);
         
-        console.log(formData);
-        fetch('http://localhost:8080/teste', {
-            method: 'POST',
-            body: formData,
+    //     console.log(dadosFuncionario,dadosMensagem);
+    //     // console.log("teste",formData);
+    //     // for (let [key, value] of formData.entries()) { 
+    //     //     console.log(`${key}: ${value}`);
+    //     //   }
+    //     fetch('http://localhost:8080/teste', {
+    //         method: 'POST',
+    //         body: JSON.stringify({
+    //             mensagem:dadosMensagem,
+    //             funcao: dadosFuncionario
+    //         }),
         
-        })
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error(error))
+    //     })
+    //     .then(response => response.json())
+    //     .then(data => console.log(data))
+    //     .catch(error => console.error(error))
         
 
         
             
      
-    }
+    // }
+    // texto={textoMensagem}
+    // valor={dadosFuncionario}
+    // texto={textoFuncionario} 
     return(
         <div>
-            <Caixa estilo={estiloCaixa} tipo="">
+            <Caixa estilo={estiloCaixa} >
                 <h1 style={estiloTitulo}>Conte</h1>
-                <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput} nome="mensagem" texto={textoMensagem} valor={dadosMensagem}/>
-                <Select estilo ={estiloSelect} nome="funcionario" texto={textoFuncionario} valor={dadosFuncionario}/>
-                <div onClick={enviar}>
-                    <Button texto= "Seila" estilo={estiloButton}/>
+                <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput} nome="mensagem" />
+                <Select estilo ={estiloSelect} nome="funcionario" />
+                <div >
+                    <Button texto= "Confirmar" estilo={estiloButton}/>
+                    {/* testetetetetst */}
                 </div>
                
             </Caixa>

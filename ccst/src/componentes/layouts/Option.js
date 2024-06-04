@@ -2,7 +2,7 @@ function Option( props){
     return(
 
 
-        <option>
+        <option value={props.valor}>
             {props.children}
         </option>
  
