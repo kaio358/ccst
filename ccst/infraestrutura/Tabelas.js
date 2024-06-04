@@ -17,6 +17,7 @@ class Tabelas{
         const sql = `CREATE TABLE IF NOT EXISTS Solicitacao 
          ( 
             idSolicitacao int  AUTO_INCREMENT, 
+            titulo varchar(45),
             mensagem varchar(255), 
             data datetime, 
             finalizado tinyint, 

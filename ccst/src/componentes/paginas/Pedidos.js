@@ -35,7 +35,7 @@ function Pedidos(props) {
                 // console.log(newData);
                 setLista(newData)
               } else {
-                //   console.log('Os dados não estão no formato esperado.',dados);
+                  console.log(dados[0].descricao.length);
                   setLista(dados)
                   // Trate o caso em que os dados não estão no formato esperado
               }
@@ -46,6 +46,12 @@ function Pedidos(props) {
     const formatarData = (dataString) => {
         const data = new Date(dataString);
         return data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
+      };
+      const limitarString = (str) => {
+        if (str.length > 60) {
+          return str.slice(0, 60) + '...';
+        }
+        return str;
       };
       
    
@@ -61,10 +67,11 @@ function Pedidos(props) {
 
                     {lista? lista.map(l=>{
                          
-                         const dataFormatada = formatarData(l.data);
+                        const dataFormatada = formatarData(l.data);
+                        const mensagemFormatada = limitarString(l.descricao)
                         //  console.log(dataFormatada);
                         // return <LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/>
-                        return <Link to={`/pedido?${l.id}`}><LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/></Link>
+                        return <Link to={`/pedido?${l.id}`}><LiMensagem para={l.especialidade} texto={mensagemFormatada} data={dataFormatada} estilo = {liMensagem}/></Link>
                     }):""}
                 </ul>
             </section>
