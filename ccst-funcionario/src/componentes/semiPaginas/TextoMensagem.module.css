@@ -1,0 +1,48 @@
+.caixaDeTextoDaMensagem{
+    display: grid;
+    margin: 20px auto;
+    /* grid-template: 1fr 1fr; */
+    grid-template-columns: 20%  60%  20% ;
+    grid-template-areas: "paraQuem  titulo  ." 
+    "texto texto texto"
+    "rodape rodape rodape";
+    row-gap: 10px;
+    width: 80%;
+    background-color: #f3efef;
+    border-radius: 5px;
+    box-shadow: rgba(31, 47, 46, 0.553) 3px 4px 3px 0px;
+    padding: 5px;
+    
+
+
+}
+.paraQuem{
+    font-weight: 700;
+    grid-area: paraQuem;
+}
+.titulo{
+    grid-area: titulo;
+    text-align: center;
+
+}
+
+.texto{
+    grid-area: texto;
+    text-align: center;
+}
+.rodape{
+    grid-area:rodape ;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 15px;
+}
+.corVer{
+    background-color: red;
+   
+}
+.corGreen{
+    background-color: green;
+}
+.corAm{
+    background-color: yellow;
+}
