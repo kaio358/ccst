@@ -4,7 +4,8 @@
     /* grid-template: 1fr 1fr; */
     grid-template-columns: 20%  60%  20% ;
     grid-template-areas: "paraQuem  titulo  ." 
-    "texto texto texto";
+    "texto texto texto"
+    "rodape rodape rodape";
     row-gap: 10px;
     width: 80%;
     background-color: #f3efef;
@@ -28,4 +29,20 @@
 .texto{
     grid-area: texto;
     text-align: center;
+}
+.rodape{
+    grid-area:rodape ;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    margin-top: 15px;
+}
+.corVer{
+    background-color: red;
+   
+}
+.corGreen{
+    background-color: green;
+}
+.corAm{
+    background-color: yellow;
 }

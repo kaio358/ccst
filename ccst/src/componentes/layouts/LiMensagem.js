@@ -6,11 +6,14 @@ function LiMensagem(props) {
             <div className={styles.para}>
                 <span >{props.para}</span>
             </div>
-            <div>
+            <div className={styles.texto}>
                 <span>{props.texto} </span>
             </div>
-            <div>
+            <div className={styles.data}>
                 <span>{props.data}</span>
+            </div>
+            <div className={ ` ${styles.classificacao_message} ${styles[props.customCor]}` }>
+
             </div>
         </li>
     )

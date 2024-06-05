@@ -18,6 +18,7 @@ function Pedidos(props) {
 
 
     const [lista,setLista] = useState([])
+   
 
     useEffect(()=>{
         fetch("http://localhost:8080/lista",{
@@ -35,7 +36,7 @@ function Pedidos(props) {
                 // console.log(newData);
                 setLista(newData)
               } else {
-                  console.log(dados[0].descricao.length);
+                  console.log(dados);
                   setLista(dados)
                   // Trate o caso em que os dados não estão no formato esperado
               }
@@ -43,6 +44,18 @@ function Pedidos(props) {
         .catch(erro=>console.log(erro))
     },[])
 
+
+    const corData = (dp)=>{
+        
+            if(dp == 6){
+                return {cor:"corGreen"}
+            }else if(dp == 4){
+                return {cor:"corVer"}
+            }else {  
+                return {cor:"corAm"}
+            }
+        
+    }
     const formatarData = (dataString) => {
         const data = new Date(dataString);
         return data.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -62,16 +75,17 @@ function Pedidos(props) {
             </div>
             <section style={caixaDeMensagens} >
                 <ul  >
-                    <LiMensagem para="Kaio" texto="seila seila" data="dia/mês/ano" estilo = {liMensagem}/>
-                    <LiMensagem para="Kaio" texto="seila seila" data="dia/mês/ano" estilo = {liMensagem}/>
+                
+                    
 
-                    {lista? lista.map(l=>{
+                    {lista? lista.map( (l,i)=>{
                          
                         const dataFormatada = formatarData(l.data);
                         const mensagemFormatada = limitarString(l.descricao)
-                        //  console.log(dataFormatada);
+                        const corFormatada = corData(l.status)
+                        
                         // return <LiMensagem para={l.especialidade} texto={l.descricao} data={dataFormatada} estilo = {liMensagem}/>
-                        return <Link to={`/pedido?${l.id}`}><LiMensagem para={l.especialidade} texto={mensagemFormatada} data={dataFormatada} estilo = {liMensagem}/></Link>
+                        return <Link to={`/pedido?${l.id}`}><LiMensagem para={l.especialidade} texto={mensagemFormatada} data={dataFormatada} estilo = {liMensagem} customCor={corFormatada.cor} /></Link>
                     }):""}
                 </ul>
             </section>

@@ -40,14 +40,25 @@ function TextoMensagem(props) {
                 // console.log(newData);
                 setDados(newData)
               } else {
-                //   console.log(dados);
+                  console.log(dados);
                   setDados(dados)
                   // Trate o caso em que os dados não estão no formato esperado
               }
         })
         .catch(erro=>console.log(erro))
     },[])
-
+  
+    const corData = (dp)=>{
+        
+        if(dp == 6){
+            return "corGreen"
+        }else if(dp == 4){
+            return "corVer"
+        }else {  
+            return "corAm"
+        }
+    
+}
     return (
         <div>
             <div>
@@ -55,10 +66,13 @@ function TextoMensagem(props) {
             </div>
             <main className={styles.caixaDeTextoDaMensagem}>
                 <div className={styles.paraQuem}>{dados ? dados[0].especialidade:""}</div>
-                <div className={styles.titulo}><h2>Seila</h2></div>
+                <div className={styles.titulo}><h2>{dados? dados[0].titulo : ""}</h2></div>
                 <div className={styles.texto}>
                     {dados?dados[0].descricao:""}
                 </div>
+                <footer className={` ${styles.rodape} ${styles[dados? corData(dados[0].status):""]}`  }>
+
+                </footer>
             </main>
 
         </div>

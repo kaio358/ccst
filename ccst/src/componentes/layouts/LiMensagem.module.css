@@ -1,7 +1,7 @@
 .message_c{
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     padding: 5px;
 
     
@@ -10,4 +10,34 @@
 
 .para{
     font-weight: 600;
+    flex: 1; /* Permite que o item ocupe o espaço disponível */
+
+}
+.texto {
+    flex: 2; /* Permite que o item ocupe mais espaço */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+.data {
+    flex: 1; 
+    /* min-width: 100px; Ajuste conforme necessário */
+    margin-right: 10px;
+    text-align: right; /* Alinha o texto à direita */
+}
+
+
+.classificacao_message{
+    border-radius: 50%;
+
+    flex-shrink: 0;
+    padding: 8px;
+}
+.corVer{
+    background-color: red;
+   
+}
+.corGreen{
+    background-color: green;
+}
+.corAm{
+    background-color: yellow;
 }

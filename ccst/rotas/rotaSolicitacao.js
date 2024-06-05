@@ -2,10 +2,15 @@ const express = require("express")
 
 const rota = express.Router()
 
-rota.post("/teste",(req,res)=>{
-    console.log(req.body);
-    
-    // res.json({ message: 'Dados recebidos com sucesso' });
+const Solicitacao = require("../modelos/Solicitacao")
+const Solicitacao_Especialidade = require("../modelos/Solicitacao_Especialidade")
+
+rota.post("/teste", async (req,res)=>{
+   
+
+    const inserirSolicitacao = await Solicitacao.adiciona(req.body.titulo, req.body.mensagem)
+    Solicitacao_Especialidade.adiciona(inserirSolicitacao.insertId, req.body.funcionario)
+   
     res.redirect("http://localhost:3000/");
 })
 

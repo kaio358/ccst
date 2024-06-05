@@ -14,5 +14,6 @@ class Especialidade{
             })
         })
     }
+    
 }
 module.exports = new Especialidade

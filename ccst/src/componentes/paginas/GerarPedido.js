@@ -81,7 +81,8 @@ function GerarPedido(props) {
         <div>
             <Caixa estilo={estiloCaixa} >
                 <h1 style={estiloTitulo}>Conte</h1>
-                <Inputs tipo="text" textoAtras="Digite aqui" estilo={estiloInput} nome="mensagem" />
+                <Inputs tipo="text" textoAtras="Título" estilo={estiloInput}  nome="titulo"/>
+                <Inputs tipo="text" textoAtras="Descrição" estilo={estiloInput} nome="mensagem" />
                 <Select estilo ={estiloSelect} nome="funcionario" />
                 <div >
                     <Button texto= "Confirmar" estilo={estiloButton}/>
