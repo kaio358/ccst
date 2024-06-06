@@ -11,14 +11,7 @@
 
 }
 
-.iconPresente{
-    color: white;
-    font-size: 40px;
-}
-.icone_site{
-    width: 64px;
-   
-}
+
 .lista_nav{
     display: flex;
     gap: 15px;
@@ -32,6 +25,24 @@
 }
 .lista_nav a:hover{
     border-bottom: 4px solid white;
+}
+.statusIcone{
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 15px;
+    
+}
+.statusIcone:hover{
+    border-color: white;
+}
+.corRed{
+    background-color: red;
+}
+.corGreen{
+    background-color: green;
+}
+.corGray{
+    background-color: gray;
 }
 ul{
     padding: 0px;

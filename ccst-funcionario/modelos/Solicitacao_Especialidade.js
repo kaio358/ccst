@@ -16,11 +16,12 @@ class Solicitacao_Especialidade{
         solicitacao_especialidade se ON s.idSolicitacao = se.solicitacao_id
     JOIN 
         especialidade e ON se.especialidade_id = e.idEspecialidade
+    WHERE 
+        se.especialidade_id = ${id}
     ORDER BY 
         s.data DESC;
 
-    WHERE 
-        e.idEspecialidade = ${id}
+
     
         `
         return new Promise((resolve, reject)=>{

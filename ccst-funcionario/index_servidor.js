@@ -18,6 +18,7 @@ const Tabelas = require('./infraestrutura/Tabelas')
 const rotaSolicitacao = require("./rotas/rotaSolicitacao")
 const rotaSolicitacaoEspecialidade = require("./rotas/rotaSolicitacaoEspecialidade")
 const rotaEspecialidade = require("./rotas/rotaEspecialidade")
+const rotaTecnico = require("./rotas/rotaTecnico")
 
 conexao.connect(erro =>{
     if(erro){
@@ -27,8 +28,9 @@ conexao.connect(erro =>{
         app.use("/",rotaSolicitacao)
         app.use("/",rotaSolicitacaoEspecialidade)
         app.use("/",rotaEspecialidade)
+        app.use("/",rotaTecnico)
         server.listen(8000,()=>{
-            console.log("Conectado: http://localhost:8080");
+            console.log("Conectado: http://localhost:8000");
         })
     }
 })

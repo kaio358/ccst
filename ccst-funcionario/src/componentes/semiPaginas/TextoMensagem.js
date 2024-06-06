@@ -22,7 +22,7 @@ function TextoMensagem(props) {
 
 
     useEffect(()=>{
-        fetch("http://localhost:8080/selecionaUm",{
+        fetch("http://localhost:8000/selecionaUm",{
             method:"Post",
             headers:{
                 'Content-Type':'application/json'
