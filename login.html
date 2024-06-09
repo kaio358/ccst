@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <input type="text" placeholder="Nome" id="login">
+        <br><br>
+        <input type="password" placeholder="Senha" id="senha">
+        <br><br>
+        <input class= "button" type="submit" onclick="logar(); return false">
+    </div>
+</body>
+
+<script>
+    function logar(){
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+            if(login == "admin" && senha == "admin"){
+                location.href = "index.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+    }
+</script>
+
+</html>
