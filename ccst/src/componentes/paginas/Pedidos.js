@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 function Pedidos(props) {
 
     const { id } = useParams();
+    localStorage.setItem("id",id)
   
     const cc = new ConjuntoClasse()
     const conjuntoTristeaza = cc.criarConjunto('claro')

@@ -85,9 +85,9 @@ class Solicitacao_Especialidade{
         JOIN 
             especialidade e ON se.especialidade_id = e.idEspecialidade
         JOIN
-            usuario u ON s.idSolicitacao = u.solicitacao_id 
+            usuario u ON u.idUsuario = s.Usuario_idUsuario
         WHERE 
-            u.idUsuario = ${idUsuario}
+            s.Usuario_idUsuario = ${idUsuario}
         ORDER BY 
             s.data DESC;
         

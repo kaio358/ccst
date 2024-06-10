@@ -4,12 +4,13 @@
 class Tabelas{
     init(conexao){
         this.conexao = conexao
+        this.criarUsuario()
         this.criarStatus()
         this.criarEspecialidade()
         this.criarSolicitacao()
         this.criarSolicitacaoEspecialidade()
         this.criarTecnico()
-        this.criarUsuario()
+  
       
 
 
@@ -23,8 +24,10 @@ class Tabelas{
             data datetime, 
             finalizado tinyint, 
             Status_idStatus int,
+            Usuario_idUsuario int,
             primary key (idSolicitacao),
-            foreign key(Status_idStatus) references Status(idStatus) 
+            foreign key(Status_idStatus) references Status(idStatus),
+            foreign key (Usuario_idUsuario) references Usuario(idUsuario)
 
         )` 
         
@@ -115,9 +118,8 @@ class Tabelas{
             idUsuario int ,
             nome varchar(45),
             senha varchar(45),
-            solicitacao_id int,
-            primary key(idUsuario),
-            FOREIGN KEY (solicitacao_id) REFERENCES solicitacao(idSolicitacao)
+            primary key(idUsuario)
+            
         )
         `
         this.conexao.query(sql,erro=>{

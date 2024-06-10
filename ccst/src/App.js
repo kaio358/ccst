@@ -31,7 +31,7 @@ function App() {
         <Route exact path='/' element ={<Login/>} />
         <Route exact path='/pedidos/:id' element ={<Pedidos/>} />
         
-        <Route exact path='/gerarPedido' element ={<GerarPedido/>} />
+        <Route exact path='/gerarPedido/:id' element ={<GerarPedido/>} />
         <Route exact path='/pedido' element={<TextoMensagem/>}/>
       
                         

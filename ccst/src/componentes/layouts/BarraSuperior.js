@@ -9,7 +9,7 @@ import styles from "./BarraSuperior.module.css"
 function BarrarSuperior(props){
    
 
-    
+    const idStorage = localStorage.getItem("id")
     return(
         <nav style={props.estilo} className={styles.containerMenu}>
             <div>
@@ -17,7 +17,7 @@ function BarrarSuperior(props){
             </div>
         <ul  className={styles.lista_nav}>
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/gerarPedido"> Gerar Pedido</Link></li>
+            <li><Link to={`/gerarPedido/${idStorage}`}> Gerar Pedido</Link></li>
          
         </ul>            
     </nav>

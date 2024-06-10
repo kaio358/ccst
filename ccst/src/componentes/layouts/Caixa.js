@@ -4,7 +4,7 @@
 
 function Caixa(props){
 
-  
+    const idStorage = localStorage.getItem("id")
  
     // const form = document.getElementById('some-form')
     //     form.addEventListener('submit', e => {
@@ -13,7 +13,7 @@ function Caixa(props){
     // })
 // action="http://localhost:8080/teste" method="POST" id="some-form"
     return(
-        <form  style={props.estilo}   action="http://localhost:8080/teste" method="POST" id="some-form" >
+        <form  style={props.estilo}   action={`http://localhost:8080/teste/${idStorage}`} method="POST" id="some-form" >
             
             {props.children} 
         </form>
