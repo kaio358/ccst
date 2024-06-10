@@ -10,6 +10,12 @@ rota.get("/lista",async (req,res)=>{
     // console.log(consulta);
     res.json(consulta)
 })
+rota.post("/listaPeloID",async (req,res)=>{
+
+    const consulta =  await solicitacao_especialidade.selecionarAPatirDoUsuario(req.body.id)
+    
+    res.json(consulta)
+})
 
 rota.post("/selecionaUm",async(req,res)=>{
     const id = req.body.id

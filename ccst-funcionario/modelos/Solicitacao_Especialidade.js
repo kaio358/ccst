@@ -2,7 +2,7 @@ const conexao = require("../infraestrutura/conexao")
 
 
 class Solicitacao_Especialidade{
-    consulta(id){
+    consulta(id,nome,senha){
         const sql = `SELECT 
         s.mensagem AS descricao, 
         e.funcao AS especialidade, 
@@ -16,8 +16,10 @@ class Solicitacao_Especialidade{
         solicitacao_especialidade se ON s.idSolicitacao = se.solicitacao_id
     JOIN 
         especialidade e ON se.especialidade_id = e.idEspecialidade
+    JOIN 
+        tecnico t ON se.especialidade_id = t.Especialidade_idEspecialidade
     WHERE 
-        se.especialidade_id = ${id}
+        t.idTecnico = ${id}  and  t.nome = ${nome} and senha = ${senha}
     ORDER BY 
         s.data DESC;
 
@@ -74,6 +76,7 @@ class Solicitacao_Especialidade{
             }
         })
     }
+
 }
 
 module.exports = new Solicitacao_Especialidade

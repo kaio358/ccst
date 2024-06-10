@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ConjuntoClasse from '../../classesTestes/ConjuntoClasse';
 import BarrarSuperior from '../layouts/BarraSuperior';
 import LiMensagem from '../layouts/LiMensagem';
@@ -7,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 function Pedidos(props) {
 
-
-
+    const { id } = useParams();
+  
     const cc = new ConjuntoClasse()
     const conjuntoTristeaza = cc.criarConjunto('claro')
     const caixaDeMensagens = conjuntoTristeaza.CaixaMensagens()
@@ -21,8 +22,12 @@ function Pedidos(props) {
    
 
     useEffect(()=>{
-        fetch("http://localhost:8080/lista",{
-            method:"GET",
+        // console.log("entrou ?");
+        fetch(`http://localhost:8080/listaPeloID`,{
+            method:"POST",
+            body:JSON.stringify({
+                id:id
+            }),
             headers:{
                 "Content-Type":"application/json"
             }
@@ -36,7 +41,7 @@ function Pedidos(props) {
                 // console.log(newData);
                 setLista(newData)
               } else {
-                  console.log(dados);
+             
                   setLista(dados)
                   // Trate o caso em que os dados não estão no formato esperado
               }
@@ -76,7 +81,7 @@ function Pedidos(props) {
             <section style={caixaDeMensagens} >
                 <ul  >
                 
-                    
+
 
                     {lista? lista.map( (l,i)=>{
                          

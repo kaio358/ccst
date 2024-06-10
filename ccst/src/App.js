@@ -7,6 +7,7 @@ import Pedidos from './componentes/paginas/Pedidos';
 
 import ConjuntoClasse from './classesTestes/ConjuntoClasse';
 import TextoMensagem from './componentes/semiPaginas/TextoMensagem';
+import Login from './componentes/paginas/Login';
 
 
 
@@ -26,7 +27,10 @@ function App() {
       
      
       <Routes>
-        <Route exact path='/' element ={<Pedidos/>} />
+        
+        <Route exact path='/' element ={<Login/>} />
+        <Route exact path='/pedidos/:id' element ={<Pedidos/>} />
+        
         <Route exact path='/gerarPedido' element ={<GerarPedido/>} />
         <Route exact path='/pedido' element={<TextoMensagem/>}/>
       

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ConjuntoClasse from '../../classesTestes/ConjuntoClasse';
 import BarrarSuperior from '../layouts/BarraSuperior';
 import LiMensagem from '../layouts/LiMensagem';
@@ -8,6 +9,8 @@ import { Link } from 'react-router-dom';
 function Pedidos(props) {
 
 
+    const { id } = useParams();
+  
 
     const cc = new ConjuntoClasse()
     const conjuntoTristeaza = cc.criarConjunto('claro')
@@ -24,7 +27,7 @@ function Pedidos(props) {
         fetch("http://localhost:8000/lista",{
             method:"POST",
             body:JSON.stringify({
-              id:1
+              id:id
             }),
             headers:{
                 "Content-Type":"application/json"

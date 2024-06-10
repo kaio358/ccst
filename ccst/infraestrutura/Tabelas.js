@@ -9,6 +9,7 @@ class Tabelas{
         this.criarSolicitacao()
         this.criarSolicitacaoEspecialidade()
         this.criarTecnico()
+        this.criarUsuario()
       
 
 
@@ -105,6 +106,25 @@ class Tabelas{
             }else{
 
                 console.log("Tabela Status criada com sucesso !!");
+            }
+        })
+    }
+    criarUsuario(){
+        const sql = `
+        CREATE TABLE IF NOT EXISTS Usuario (
+            idUsuario int ,
+            nome varchar(45),
+            senha varchar(45),
+            solicitacao_id int,
+            primary key(idUsuario),
+            FOREIGN KEY (solicitacao_id) REFERENCES solicitacao(idSolicitacao)
+        )
+        `
+        this.conexao.query(sql,erro=>{
+            if(erro){
+                console.log(erro);
+            }else{
+                console.log("Tabela Usuario criada com sucesso !!");
             }
         })
     }
